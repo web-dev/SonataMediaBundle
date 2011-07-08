@@ -220,7 +220,7 @@ class FileProvider extends BaseProvider
     {
         $this->fixBinaryContent($media);
 
-        if (!$media->getBinaryContent()) {
+        if (is_null($media->getBinaryContent())) {
             return;
         }
 
